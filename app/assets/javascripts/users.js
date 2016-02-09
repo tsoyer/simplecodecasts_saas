@@ -5,7 +5,7 @@ $(document).ready(function() {
         event.preventDefault();
         $('input[type=submit]').prop('disabled', true);
         var error = false;
-        var ccNum = $('#.card_number').val(),
+        var ccNum = $('#card_number').val(),
             cvcNum = $('#card_code').val(),
             expMonth = $('#card_month').val(),
             expYear = $('#card_year').val();
@@ -30,7 +30,7 @@ $(document).ready(function() {
         var token = response.id;
         
         // Add the token to the form:
-        f.append('<input type="hidden name="user[stripe_card_token]" value="'+ token + '" />');
+        f.append('<input type="hidden name="user[stripe_card_token]" value="' + token + '" />');
         
         // Submit the form:
         f.get(0).submit();
